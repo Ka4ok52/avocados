@@ -1,0 +1,57 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+}
+.head {
+    background-color: #255a02;
+}
+.main {
+    font-size: 110%;
+    color: #fff;
+    padding: 20px;
+    height: 800px;
+    background-color: #659225;
+}
+.footer {
+    background-color: #8d6142;
+} 
+.head, .footer {
+    font-size: 220%;
+    text-align: center;
+    color: #fff;
+    padding: 30px;
+} 
+.head button {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 90%;
+    margin: 8px auto;
+    padding: 8px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+} 
+.head .dropdown {
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+}
+.head .dropdown a {
+    padding: 10px;
+    margin-right: 20px; 
+}
+.head .dropdown.open {
+    opacity: 1;
+    visibility: visible;
+    max-height: 200px;
+} 
+.hidden {
+    display: none;
+}
