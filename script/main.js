@@ -1,22 +1,18 @@
 function toggleDropdown() {
-  const dropdown = document.getElementById("myDropdown");
-  dropdown.classList.toggle('open');
+  document.getElementById("myDropdown").classList.toggle('open');
 }
 
-window.onclick = function(event) {
-  if (!event.target.matches('.head button')) {
-    const dropdown = document.getElementById("myDropdown");
-    if (dropdown.classList.contains('open')) {
-      dropdown.classList.remove('open');
-    }
+window.addEventListener('click', (event) => {
+  if (!event.target.closest('.head button') && !event.target.closest('.dropdown')) {
+    document.getElementById("myDropdown").classList.remove('open');
   }
-}
+});
 
 const scrollToTop = () => {
-  const scroll = document.documentElement.scrollTop || document.body.scrollTop;
-
-  if (scroll > 0) {
-    window.requestAnimationFrame(scrollToTop);
-    window.scrollTo(0, scroll - scroll / 8);
-  }
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 };
+
+const smallText = document.getElementById('footer');
+smallText.addEventListener('click', () => {
+  window.location.href = 'null.html';
+});

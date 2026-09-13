@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style/crt-overlay.css">
+        <link rel="stylesheet" href="style/arcade.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <title>GAME</title>
+    </head>
+    <body>
+        <!-- GAME -->
+        <div class="arcade-container">
+            <div class="canvas-wrapper">
+                <canvas id="gameCanvas" width="224" height="256"></canvas>
+            </div>
+            <!-- Touch Controls for mobile/tablet -->
+            <div class="mobile-controls">
+                <div class="d-pad">
+                    <button class="btn" id="btn-left">LEFT</button>
+                    <button class="btn" id="btn-right">RIGHT</button>
+                </div>
+                <div class="action-pad">
+                    <button class="btn btn-fire" id="btn-fire">FIRE</button>
+                </div>
+            </div>
+            <div class="instructions">
+                [LEFT / RIGHT use A/D] Move 
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                [SPACE] Fire 
+            </div>
+        </div>
+
+        <div class="crt-overlay"></div>
+        <script src="script/arcade.js"></script>
+    </body>
+</html>

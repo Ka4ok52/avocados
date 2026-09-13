@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    overflow: hidden;
+    background-image: linear-gradient(
+        to bottom,
+        #05050a 0%,
+        #1f1c2c 20%,
+        #ff5e62 25%,
+        #ff9966 28%,
+        #4a90e2 35%,
+        #6ba4e8 50%,
+        #4a90e2 65%,
+        #f27121 72%,
+        #e94057 75%,
+        #8a2387 78%,
+        #1f1c2c 85%,
+        #05050a 100%
+    );
+    background-size: 100% 1000%;
+    background-position: 0% 0%;
+    transition: background-position 1s linear, color 2s ease;
+    color: #ffffff;
+}
+
+.clock-container {
+    text-align: center;
+    user-select: none;
+}
+
+.time {
+    font-size: 10vw;
+    font-weight: bold;
+    line-height: 1;
+}
+
+#ms-time {
+    font-size: 5vw;
+    opacity: 0.8;
+}
+
+.date {
+    font-size: 2.5vw;
+    margin-top: 20px;
+    opacity: 0.7;
+}

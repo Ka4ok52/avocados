@@ -1,0 +1,42 @@
+body {
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+#ripple-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 9999;
+}
+.ripple-circle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.7); 
+    background: transparent;
+    
+    transform: translate(-50%, -50%) scale(0);
+    animation: ripple-outline-animation 0.8s ease-out;
+    pointer-events: none;
+    box-sizing: border-box;
+}
+
+@keyframes ripple-outline-animation {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 1;
+        border-width: 4px;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(6);
+        opacity: 0;
+        border-width: 1px;
+    }
+}
